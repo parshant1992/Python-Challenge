@@ -46,7 +46,6 @@ for candidate, votes in candidates.items():
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
-
 # Write the results to a text file
 filepath = os.path.join('Resources', 'PyPoll_Results.txt')
 with open(filepath, 'w') as txtfile:
@@ -56,7 +55,7 @@ with open(filepath, 'w') as txtfile:
     print("-------------------------",file = txtfile)
     for candidate, votes in candidates.items():
         percentage = percentage_votes[candidate]
-        print(f"{candidate}: {percentage}% ({votes})")
+        print(f"{candidate}: {percentage}% ({votes})",file = txtfile)
     print("-------------------------",file = txtfile)
     print(f"Winner: {winner}",file = txtfile)
     print("-------------------------",file = txtfile)
